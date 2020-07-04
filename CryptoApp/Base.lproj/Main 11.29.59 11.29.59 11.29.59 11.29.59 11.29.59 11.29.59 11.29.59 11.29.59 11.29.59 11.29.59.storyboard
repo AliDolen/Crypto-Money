@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="81e-SO-U3Z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="184" id="f85-oo-L2j" customClass="CryptoTableViewCell" customModule="CryptoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="184"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f85-oo-L2j" id="CeA-xz-iJb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akh-VO-jrH">
+                                                    <rect key="frame" x="33" y="38" width="340" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="TnS-L4-IQJ"/>
+                                                        <constraint firstAttribute="width" constant="340" id="qP9-m8-K5I"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfR-Qr-93t">
+                                                    <rect key="frame" x="33" y="94" width="340" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OfR-Qr-93t" firstAttribute="top" secondItem="akh-VO-jrH" secondAttribute="bottom" constant="31" id="4C7-gV-sii"/>
+                                                <constraint firstItem="akh-VO-jrH" firstAttribute="leading" secondItem="OfR-Qr-93t" secondAttribute="leading" id="FLw-ut-tTi"/>
+                                                <constraint firstItem="akh-VO-jrH" firstAttribute="trailing" secondItem="OfR-Qr-93t" secondAttribute="trailing" id="IFM-QJ-uMA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OfR-Qr-93t" secondAttribute="bottom" constant="63" id="Pvz-ct-DhK"/>
+                                                <constraint firstItem="akh-VO-jrH" firstAttribute="leading" secondItem="CeA-xz-iJb" secondAttribute="leadingMargin" constant="13" id="Xky-Hb-UzG"/>
+                                                <constraint firstItem="akh-VO-jrH" firstAttribute="top" secondItem="CeA-xz-iJb" secondAttribute="topMargin" constant="27" id="vHM-aD-NdK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currencyText" destination="akh-VO-jrH" id="0Js-Zy-Kym"/>
+                                            <outlet property="priceText" destination="OfR-Qr-93t" id="Bhy-oX-sC9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="81e-SO-U3Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M1p-a4-lBL"/>
+                            <constraint firstItem="81e-SO-U3Z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QRH-7c-7RS"/>
+                            <constraint firstItem="81e-SO-U3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bDp-Rv-689"/>
+                            <constraint firstItem="81e-SO-U3Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mOh-iX-fbR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="81e-SO-U3Z" id="wGq-dX-TR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
